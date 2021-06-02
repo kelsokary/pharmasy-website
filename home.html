@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+	<link rel="stylesheet" type="text/css" href="../css/home.css">
+</head>
+<body>
+	<div>	
+        <nav>
+            <ul>
+                <li class="logo"><img src="../imgs/Logo.png"></li>
+                <li><a href="">HOME</a></li>
+                <li><a href="products.html#bottom">ABOUT</a></li>
+                <li><a href="products.html#bottom">CONTACT US</a></li>
+                <div style="margin-left: 925px;"></div>
+                <li class="icon"><a href="checkout.html"><img src="../icons/cart.svg"></a></li>
+                <li class="profile"><img src="../icons/userimg.svg">
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                        <div id="myDropdown" class="dropdown-content">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <h1>Welcome to TMYMKA Pharmacy</h1>
+        <h2>We sell the newest and most advanced healthcare devices and medicines.</h2>
+        <input type="text" placeholder="Search stock...">
+        <label>
+            <a href="products.html"><img src="../icons/search.svg" style="width: 40%; height: 1%;"></a>
+        </label>
+	</div>
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+        }
+        }
+        }
+        }
+    </script>
+</body>
+</html>
